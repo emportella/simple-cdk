@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+echo "Checking $file"
+npm run lint && npm run test
+if [ $? -ne 0 ]; then
+    echo "Linting or testing failed. Please check your code and try again."
+    exit 1 # exit with failure status
+fi
